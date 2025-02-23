@@ -18,9 +18,38 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web:3.4.2'
+	implementation 'org.springframework.data:spring-data-jpa'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.4.2'
+
+	//implementation 'javax.persistence:javax.persistence-api:2.2'
+	implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+
+
+	implementation 'com.h2database:h2:2.1.214'
+
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// junit testing
+	testImplementation platform('org.junit:junit-bom:5.10.0')
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+
+	// annotations
+	implementation('org.projectlombok:lombok:1.18.36')
+	compileOnly 'org.projectlombok:lombok:1.18.36'
+	annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+	implementation 'org.slf4j:slf4j-simple:1.7.36'
+	implementation 'org.apache.logging.log4j:log4j-core:2.24.1'
+
+	// excel processing
+	implementation 'org.apache.poi:poi-ooxml:5.4.0'
+
+	// json object processing
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
 }
 
 tasks.named('test') {

@@ -1,0 +1,2 @@
+INSERT INTO TRANSLATION (id, word) VALUES (1, 'en');
+INSERT INTO TRANSLATION (id, word) VALUES (2, 'de');
